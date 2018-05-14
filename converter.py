@@ -41,7 +41,7 @@ class Converter(object):
                 # currencies = (curr for curr in self._currency_data["rates"].keys())
                 # self._dict_out = dict(zip(currencies, to_output))
                 self._dict_out = {
-                    curr: round(self._to_eur * rate, 2) for rate, curr in self._currency_data["rates"].items()
+                    curr: round(self._to_eur * rate, 2) for curr, rate in self._currency_data["rates"].items()
                     }
 
             self.result = {
